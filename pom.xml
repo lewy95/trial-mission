@@ -5,6 +5,7 @@
 
     <groupId>cn.xzxy.lewy</groupId>
     <artifactId>trial-mission</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <name>trial-mission</name>
     <description>trial mission for more frameworks</description>
@@ -17,6 +18,8 @@
 
     <modules>
         <module>trail-atomikos</module>
+        <module>trail-quartz</module>
+        <module>trail-akka</module>
     </modules>
 
     <properties>
