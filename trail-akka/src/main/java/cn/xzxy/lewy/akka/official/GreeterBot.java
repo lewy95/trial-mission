@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.akka;
+package cn.xzxy.lewy.akka.official;
 
 import akka.actor.typed.Behavior;
 import akka.actor.typed.javadsl.AbstractBehavior;
