@@ -20,6 +20,7 @@
         <module>trail-atomikos</module>
         <module>trail-quartz</module>
         <module>trail-akka</module>
+        <module>trail-netty</module>
     </modules>
 
     <properties>
