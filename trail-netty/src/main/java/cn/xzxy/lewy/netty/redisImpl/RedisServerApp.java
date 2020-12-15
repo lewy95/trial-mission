@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.netty.testRedis;
+package cn.xzxy.lewy.netty.redisImpl;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

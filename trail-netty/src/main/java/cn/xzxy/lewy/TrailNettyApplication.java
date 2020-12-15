@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.netty;
+package cn.xzxy.lewy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

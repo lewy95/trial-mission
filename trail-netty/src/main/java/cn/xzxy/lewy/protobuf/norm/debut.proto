@@ -1,0 +1,10 @@
+syntax = "proto3";
+package msg;
+
+option java_package = "cn.xzxy.lewy.protobuf.pojo";
+option java_outer_classname = "LoginDto";
+
+message Login {
+  string userName = 1;
+  int32  password = 2;
+}
