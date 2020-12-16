@@ -1,0 +1,59 @@
+// protobuf的语法版本，就类似于jdk1.7和jdk1.8的概念，需要在第一行指定，默认使用的是proto2
+syntax = "proto3";
+// 配置生成proto文件的地址，与 option java_package 作用相似，只配置一个即可
+package cn.xzxy.lewy.protobuf.pojo;
+//option java_package = "cn.xzxy.lewy.protobuf.pojo";
+// 配置生成proto文件的名称，若不配，默认与.proto同名
+option java_outer_classname = "LoginProto";
+
+/**
+ * 生成命令：
+ * 单个文件生成：protoc --java_out=java java/cn/xzxy/lewy/protobuf/norm/staff.proto
+ * 多个文件生成：protoc --java_out=java java/cn/xzxy/lewy/protobuf/norm/通配符.proto
+ *
+ * enum 和 message 表示数据格式
+ *
+ * 1. 一个 .proto 文件中可以多个 message；
+ * 2. message 的数据类型包括：string、byte、bool、map、enum、数字类型和用户自定义的 message；
+ * 3. message 中也可以定义 list，只需要在对象前加上 repeated 关键字即可；
+ * 4. 定义字段需要加上唯一的标识数字，如 string nickname = 3，用于二进制格式识别，该数字一旦被使用就不能改变；
+ *    注意：message中数字从1开始，enum中数字从0开始；
+ * 5.
+ *
+ *
+ */
+enum PlatForm {
+  IOS = 0; //ios
+  ANDROID = 1; //安卓
+  // 不要加上 UNRECOGNIZED，枚举类会为其自动生成，所以会重复
+  // UNRECOGNIZED = -1; // 未识别
+}
+
+
+message UserInfo {
+  int64 player_id = 1; //  id
+  string nickname = 2; // 昵称
+  int32 sex = 3; // 性别
+}
+
+message LoginResponse {
+  LoginResult result = 1;     // 登陆结果
+  UserInfo user_info = 2; // 用户信息
+}
+
+enum LoginResult {
+  LOGIN_SUCCESS_REGISTERED = 0; // 成功登录
+  LOGIN_SUCCESS_UNREGISTERED = 1; // 游客成功登录
+  SERVER_IS_BUSY = 2; // 服务器繁忙
+}
+
+// 应用配置信息
+message ServerConf {
+  string key = 1;
+  int32 value = 2;
+}
+
+// 获取应用配置响应
+message GetServerConf {
+  repeated ServerConf serverConf = 1;
+}

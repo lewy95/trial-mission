@@ -1,0 +1,35 @@
+syntax = "proto3";
+// 配置生成proto文件的地址，与 option java_package 作用相似，只配置一个即可
+package cn.xzxy.lewy.protobuf.pojo;
+//option java_package = "cn.xzxy.lewy.protobuf.pojo";
+// 配置生成proto文件的名称，若不配，默认与.proto同名
+option java_outer_classname = "StaffProto";
+
+message Staff {
+  int32 id = 1;
+  string name = 2;
+  int32 age = 3;
+
+  // 枚举示例
+  enum PhoneType {
+    MOBILE = 0;
+    TELEPHONE = 1;
+  }
+
+  // 嵌套示例
+  message PhoneNumber {
+    string number = 1;
+    PhoneType type = 2;
+  }
+
+  // list示例
+  repeated PhoneNumber phone = 4;
+
+  message Map {
+    string key = 1;
+    int32 value = 2;
+  }
+
+  // map示例
+  Map map = 5;
+}
