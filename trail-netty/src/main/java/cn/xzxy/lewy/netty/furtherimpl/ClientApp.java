@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.netty.client;
+package cn.xzxy.lewy.netty.furtherimpl;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.Unpooled;
@@ -47,7 +47,8 @@ public class ClientApp {
             ChannelFuture future = bootstrap.connect().sync();
 
             // 发送消息到服务器端
-            future.channel().writeAndFlush(Unpooled.copiedBuffer("Hello oo", CharsetUtil.UTF_8));
+            future.channel().writeAndFlush(Unpooled.copiedBuffer("Hello oo, Hello oo, Hello oo, Hello oo, Hello oo,",
+                    CharsetUtil.UTF_8));
 
             // 阻塞操作，closeFuture()开启了一个channel的监听器
             future.channel().closeFuture().sync();

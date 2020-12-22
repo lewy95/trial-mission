@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.netty.client;
+package cn.xzxy.lewy.netty.furtherimpl;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;

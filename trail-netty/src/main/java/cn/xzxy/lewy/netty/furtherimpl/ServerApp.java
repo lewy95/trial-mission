@@ -1,5 +1,6 @@
-package cn.xzxy.lewy.netty.server;
+package cn.xzxy.lewy.netty.furtherimpl;
 
+import cn.xzxy.lewy.netty.furtherimpl.assembly.LengthRestrictedFrameDecoder;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -14,6 +15,8 @@ import java.net.InetSocketAddress;
  * 服务器端启动类
  */
 public class ServerApp {
+
+    private static final int maxBytesLength = 20480;
 
     private int port;
 
@@ -35,7 +38,9 @@ public class ServerApp {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             // 配置 childHandler 来通知一个关于消息处理的InfoServerHandler实例
-                            socketChannel.pipeline().addLast(new ServerHandler());
+                            socketChannel.pipeline()
+                                    //.addLast(new LengthRestrictedFrameDecoder(maxBytesLength))
+                                    .addLast(new ServerHandler());
                         }
                     });
             // 绑定服务器，该实例将提供有关IO操作的结果或状态的信息
