@@ -21,6 +21,7 @@
         <module>trail-quartz</module>
         <module>trail-akka</module>
         <module>trail-netty</module>
+        <module>trail-luaj</module>
     </modules>
 
     <properties>
