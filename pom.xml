@@ -19,8 +19,6 @@
     <modules>
         <module>trail-atomikos</module>
         <module>trail-quartz</module>
-        <module>trail-akka</module>
-        <module>trail-netty</module>
         <module>trail-luaj</module>
     </modules>
 
@@ -120,6 +118,7 @@
                         <charset>UTF-8</charset>
                         <additionalJOption>-Xdoclint:none</additionalJOption>
                     </configuration>
+
                 </plugin>
             </plugins>
         </pluginManagement>

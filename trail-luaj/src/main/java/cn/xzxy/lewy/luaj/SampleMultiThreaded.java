@@ -1,6 +1,7 @@
 package cn.xzxy.lewy.luaj;
 
 import org.luaj.vm2.Globals;
+import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.JsePlatform;
 import org.luaj.vm2.luajc.LuaJC;
 
@@ -24,21 +25,20 @@ public class SampleMultiThreaded {
 
     static class Runner implements Runnable {
         final String script;
+        LuaValue luaValue;
 
         Runner(String script) {
+            // Each thread must have its own Globals.
+            Globals g = JsePlatform.standardGlobals();
+            // LuaJC.install(g); // use LuaJC
+            luaValue = g.loadfile(script);
+
             this.script = script;
         }
 
         public void run() {
             try {
-                // Each thread must have its own Globals.
-                Globals g = JsePlatform.standardGlobals();
-                LuaJC.install(g);
-
-                // Once a Globals is created, it can and should be reused
-                // within the same thread.
-                g.loadfile(script).call();
-
+                luaValue.call();
             } catch (Exception e) {
                 e.printStackTrace();
             }
