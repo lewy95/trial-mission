@@ -28,16 +28,16 @@ public class SampleMultiThreaded {
         LuaValue luaValue;
 
         Runner(String script) {
-            // Each thread must have its own Globals.
-            Globals g = JsePlatform.standardGlobals();
-            // LuaJC.install(g); // use LuaJC
-            luaValue = g.loadfile(script);
-
             this.script = script;
         }
 
         public void run() {
             try {
+                // Each thread must have its own Globals.
+                Globals g = JsePlatform.standardGlobals();
+                LuaJC.install(g); // use LuaJC
+                luaValue = g.loadfile(script);
+                System.out.println(luaValue.isclosure()); // if false means using LuaJC
                 luaValue.call();
             } catch (Exception e) {
                 e.printStackTrace();
