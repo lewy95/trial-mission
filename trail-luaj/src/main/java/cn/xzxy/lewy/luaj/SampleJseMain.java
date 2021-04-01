@@ -8,6 +8,8 @@ import org.luaj.vm2.luajc.LuaJC;
 /**
  * Simple program showing the minimal Java program to launch a script.
  *
+ * luaj api: http://luaj.org/luaj/3.0/api/index.html
+ *
  * <p> In typical usage, a Globals object must be created to hold global state,
  * and it can be used to compile and load lua files into executable LuaValue
  * instances.
