@@ -1,6 +1,6 @@
 package cn.xzxy.lewy.core.util;
 
-import com.gahon.springboot.cas.core.profile.UserProfile;
+import cn.xzxy.lewy.core.profile.UserProfile;
 import org.jasig.cas.client.authentication.AttributePrincipal;
 
 /**

@@ -1,9 +1,8 @@
 package cn.xzxy.lewy.core;
 
-import com.gahon.springboot.cas.core.filter.AutoAuthFilter;
-import com.gahon.springboot.cas.core.filter.CasAjaxNotLoginFilter;
-import com.gahon.springboot.cas.core.filter.ContextThreadLocalFilter;
-import com.gahon.springboot.cas.core.util.CasUtils;
+import cn.xzxy.lewy.core.filter.AutoAuthFilter;
+import cn.xzxy.lewy.core.filter.CasAjaxNotLoginFilter;
+import cn.xzxy.lewy.core.filter.ContextThreadLocalFilter;
 import org.jasig.cas.client.boot.configuration.CasClientConfiguration;
 import org.jasig.cas.client.boot.configuration.CasClientConfigurationProperties;
 import org.jasig.cas.client.boot.configuration.CasClientConfigurer;
@@ -95,7 +94,7 @@ public class CasConfiguration implements CasClientConfigurer {
 
     /**
      * 添加全局属性配置， 注意该Filter的位置，必须在assertionThreadLocalFilter 后边。
-     * 另外需要保证该filter在其他使用 {@link CasUtils} 的filter之前加载
+     * 另外需要保证该filter在其他使用 CasUtils 的filter之前加载
      */
     @Bean(name = "contextThreadLocalFilter")
     public FilterRegistrationBean contextThreadLocalFilter() {

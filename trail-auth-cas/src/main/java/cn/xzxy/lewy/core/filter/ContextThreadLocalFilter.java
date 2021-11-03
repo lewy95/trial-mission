@@ -1,6 +1,6 @@
 package cn.xzxy.lewy.core.filter;
 
-import com.gahon.springboot.cas.core.util.CasUtils;
+import cn.xzxy.lewy.core.util.CasUtils;
 import org.jasig.cas.client.authentication.AttributePrincipal;
 import org.jasig.cas.client.util.AssertionHolder;
 import org.jasig.cas.client.validation.Assertion;

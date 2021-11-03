@@ -1,7 +1,7 @@
 package cn.xzxy.lewy.core.web;
 
-import com.gahon.springboot.cas.core.profile.UserProfile;
-import com.gahon.springboot.cas.core.util.CasUtils;
+import cn.xzxy.lewy.core.profile.UserProfile;
+import cn.xzxy.lewy.core.util.CasUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;

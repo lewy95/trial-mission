@@ -1,7 +1,7 @@
 package cn.xzxy.lewy.controller;
 
-import com.gahon.springboot.cas.core.util.CasUtils;
-import com.gahon.springboot.cas.core.profile.UserProfile;
+import cn.xzxy.lewy.core.profile.UserProfile;
+import cn.xzxy.lewy.core.util.CasUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
