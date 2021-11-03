@@ -20,6 +20,7 @@
         <module>trail-atomikos</module>
         <module>trail-quartz</module>
         <module>trail-luaj</module>
+        <module>trail-auth-cas</module>
     </modules>
 
     <properties>
