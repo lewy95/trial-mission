@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>fd财务系统</title>
+</head>
+<body>
+欢迎：&nbsp;&nbsp;<font th:text="${session._const_cas_assertion_.principal.name}"></font>&nbsp;&nbsp;fd财务系统；
+<br/><br/>
+&nbsp;&nbsp;<a href="/logout">安全退出</a>
+</body>
+</html>

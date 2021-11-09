@@ -1,0 +1,8 @@
+server:
+  port: 7777
+
+cas:
+  server-url-prefix: https://hanmy.com:8443/cas
+  server-login-url: https://hanmy.com:8443/cas/login
+  client-host-url: http://hanmy.com:7777
+  validation-type: cas3

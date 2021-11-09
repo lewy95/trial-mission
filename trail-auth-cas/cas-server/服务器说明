@@ -1,0 +1,13 @@
+CAS-Server 说明：
+1. war包（5.3版本）下载地址：https://repo1.maven.org/maven2/org/apereo/cas/cas-server-webapp-tomcat/5.3.14/
+   5.3 及以前是 maven 版本，以后是 gradle 版本
+2. tomcat 路径：/Users/lewy/DevTools/tomcat/apache-tomcat-9.0.54/bin
+   启用：./startup.sh
+   停用：./shutdown.sh
+   下载好的 war 包需要放在 webapps 目录下
+3. log 目录下面为服务器日志，而非客户端日志；
+4. cas/login username&pwd：lewy / 960118
+
+*******
+目前是直接将官方默认的cas.war包丢在tomcat下去运行，如果需要自己去修改cas server中相关的逻辑或者页面，需要将源码
+拉到本地后运行，参考https://blog.csdn.net/u012702547/article/details/106465914
